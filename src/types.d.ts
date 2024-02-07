@@ -1,4 +1,4 @@
-export interface IAuthorizationBase {
+declare interface IAuthorizationBase {
 	GetToken: () => string;
 	GetAuthCode: () => string | null;
 	// RequestTokenByAuthcode: (code: string) => Promise<string>;
@@ -6,13 +6,13 @@ export interface IAuthorizationBase {
 	RequestTokenStatus: (token: string) => Promise<Boolean>;
 	GoLogin: () => void;
 }
-export interface IAuthorizationCodeFlow extends IAuthorizationBase  {
+declare interface IAuthorizationCodeFlow extends IAuthorizationBase  {
 	RequestTokenByAuthcode: (code: string) => Promise<string>;
 }
-export interface IAuthorizationCredential extends IAuthorizationBase  {
+declare interface IAuthorizationCredential extends IAuthorizationBase  {
 	RequestTokenByCredential: () => Promise<string>;
 }
-export type OidcConfugiration = {
+declare type OidcConfugiration = {
 	baseUrl: string,
 	tokenEndpoint: string,
 	authEndpoint: string,

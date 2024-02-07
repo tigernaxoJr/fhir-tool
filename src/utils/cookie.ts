@@ -10,4 +10,4 @@ function GetValue(name: string) {
     return '';
 }
 
-export default {GetValue}
+export default { GetValue }
