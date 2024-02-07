@@ -1,5 +1,6 @@
 import { RemoveParameter } from './utils/url'
 import cookie from "./utils/cookie";
+import { IAuthorizationCodeFlow, IAuthorizationCredential, OidcConfugiration } from './types';
 
 class Oidc implements IAuthorizationCodeFlow , IAuthorizationCredential{
 	conf!: OidcConfugiration;

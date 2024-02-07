@@ -1,3 +1,5 @@
+import { IAuthorizationCodeFlow, IAuthorizationCredential } from "./types";
+
 /* 登入檢查 */
 export async function AuthCredential(provider: IAuthorizationCredential): Promise<Boolean> {
 
